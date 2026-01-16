@@ -15,7 +15,7 @@
 
 !procedure $showMeta($meta)
   !foreach $key in $meta
-    $lowerKey = %lower($key)
+    !$lowerKey = %lower($key)
     !if ($lowerKey == "title")
       title $meta[$key]
     !elseif ($lowerKey == "caption")
