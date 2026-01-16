@@ -15,9 +15,10 @@
 
 !procedure $showMeta($meta)
   !foreach $key in %get_json_keys($meta)
-    !if (%lower($key) == "title")
+    !$lowerKey = %lower($key)
+    !if ($lowerKey == "title")
       title "$meta[$key]"
-    !elseif (%lower($key) == "caption")
+    !elseif ($lowerKey == "caption")
       caption "$meta[$key]"
     !endif
   !endfor
