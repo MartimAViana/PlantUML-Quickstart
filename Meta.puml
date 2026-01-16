@@ -1,0 +1,28 @@
+@startuml
+
+!procedure $setImageScale($width, $height)
+  scale max 100000 width
+  scale max 100000 height
+!endprocedure
+
+!procedure $setDiagramDirection($to, $from)
+  $from to $to direction
+!endprocedure
+
+!procedure $setDPI($dpi)
+  skinparam dpi $dpi
+!endprocedure
+
+!procedure $showMeta($meta)
+  !foreach $key in $meta
+    $lowerKey = %lower($key)
+    !if ($lowerKey == "title")
+      title $meta[$key]
+    !elseif ($lowerKey == "caption")
+      caption $meta[$key]
+    !endif
+  !endfor
+!endprocedure
+
+
+@enduml
