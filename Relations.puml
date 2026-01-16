@@ -1,0 +1,11 @@
+@startuml
+!procedure $showRelations($relations)
+  !foreach $relation in %get_json_keys($relations)
+    !foreach $to in %get_json_keys($relations[$relation])
+      !foreach $from in $relations[$relation][$to]
+        $to $relation $from
+      !endfor
+    !endfor
+  !endfor
+!endprocedure
+@enduml
