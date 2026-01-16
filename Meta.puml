@@ -14,7 +14,7 @@
 !endprocedure
 
 !procedure $showMeta($meta)
-  !foreach $key in $meta
+  !foreach $key in %get_json_keys($meta)
     !if (%lower($key) == "title")
       title "$meta[$key]"
     !elseif (%lower($key) == "caption")
